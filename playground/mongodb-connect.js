@@ -11,16 +11,16 @@ if(err){
 console.log('Connected to Mongodb Server');
 const db = client.db('TodoApp');
 
-// db.collection('Todos').insertOne({
-//     text: 'Something to do',
-//     completed: false
-// }, (err, result)=>{
-//     if(err){
-//         return console.log('Unable to insert item in mongodb', err);
-//     }
+db.collection('Todos').insertOne({
+    text: 'Indoor climbing at Dogpatch SF - "bouldering"',
+    completed: false
+}, (err, result)=>{
+    if(err){
+        return console.log('Unable to insert item in mongodb', err);
+    }
 
-//     console.log(JSON.stringify(result.ops, undefined, 2));
-// })
+    console.log(JSON.stringify(result.ops, undefined, 2));
+})
 
 // db.collection('Users').insertOne({
 //     name: 'Kristina',
