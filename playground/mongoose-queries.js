@@ -33,15 +33,15 @@ Users.findById(userId).then((user)=>{
 //     console.log('Todos', todos);
 // });
 
-// Todo.findOne({
-//     _id: id
-// }).then((todo)=>{
-//     console.log('Todo', todo);
-// });
+Todo.findOne({
+    _id: id
+}).then((todo)=>{
+    console.log('Todo', todo);
+});
 
-// Todo.findById(id).then((todo)=>{
-//     if(!todo){
-//         return console.log('Id is not found');
-//     }
-//     console.log('Todo by Id', todo);
-// }).catch((e)=> console.log(e));
+Todo.findById(id).then((todo)=>{
+    if(!todo){
+        return console.log('Id is not found');
+    }
+    console.log('Todo by Id', todo);
+}, ()=> { }).catch((e)=> console.log(e));
